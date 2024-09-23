@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'org.seleniumhq.selenium:selenium-java:4.9.1'
+    testImplementation "org.projectlombok:lombok:1.18.22"
+    implementation 'org.projectlombok:lombok:1.18.22'
+    implementation "org.slf4j:slf4j-simple:2.0.6"
+    implementation 'io.rest-assured:rest-assured:5.2.0'
+    implementation 'net.minidev:json-smart:2.5.1'
+}
+
+test {
+    useJUnitPlatform()
+}
